@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="1149.0" style="-fx-background-color: C4DBFA;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.GUIController">
+   <children>
+      <Button layoutX="440.0" layoutY="471.0" mnemonicParsing="false" onAction="#resetButtonPressed" text="Reset" textFill="#3484f0" />
+      <Button layoutX="430.0" layoutY="509.0" mnemonicParsing="false" onAction="#execute1InstructieButtonPressed" prefHeight="26.0" prefWidth="138.0" text="Execute 1 Instructie" />
+      <Button layoutX="431.0" layoutY="539.0" mnemonicParsing="false" onAction="#executeAlleInstructiesButtonPressed" text="Execute Alle Instructies" />
+      <ChoiceBox fx:id="choiceBoxDataSet" layoutX="492.0" layoutY="470.0" prefHeight="26.0" prefWidth="178.0" />
+      <TitledPane animated="false" collapsible="false" layoutX="707.0" layoutY="105.0" prefHeight="223.0" prefWidth="202.0" text="Huidige Instructie" textAlignment="CENTER" textFill="#3484f0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="180.8" prefWidth="200.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="-9.0" layoutY="25.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label fx:id="zz" prefHeight="18.0" prefWidth="125.0" text="PID" />
+                                    <Pane fx:id="zzz" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelHuidigPid" contentDisplay="CENTER" layoutX="45.0" layoutY="1.0" prefHeight="18.0" prefWidth="74.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="51.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="81.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="163.0" text="Virtueel Adres" />
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelHuidigVirtueelAdres" contentDisplay="CENTER" layoutX="24.0" layoutY="4.0" prefHeight="18.0" prefWidth="88.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="115.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="163.0" text="Fysiek Adres" />
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelHuidigFysiekAdres" contentDisplay="CENTER" layoutX="25.0" layoutY="4.0" prefHeight="18.0" prefWidth="80.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="141.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="125.0" text="Offset" />
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelHuidigeOffset" contentDisplay="CENTER" layoutX="45.0" layoutY="1.0" prefHeight="18.0" prefWidth="83.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="-9.0" layoutY="167.0" prefHeight="18.0" prefWidth="87.0" text="Page" />
+                              <Label fx:id="labelHuidigPageNummer" contentDisplay="CENTER" layoutX="99.0" layoutY="167.0" prefHeight="18.0" prefWidth="30.0" text="null" />
+                           </children></Pane>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="26.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="125.0" text="Operatie" />
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelHuidigeInstructie" contentDisplay="CENTER" layoutX="45.0" layoutY="1.0" prefHeight="18.0" prefWidth="83.0" text="null" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="707.0" layoutY="328.0" prefHeight="236.0" prefWidth="202.0" text="Vorige Instructie" textAlignment="CENTER" textFill="#3484f0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="180.8" prefWidth="200.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <HBox layoutX="-9.0" layoutY="25.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="125.0" text="PID" />
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelVorigPid" contentDisplay="CENTER" layoutX="45.0" layoutY="1.0" prefHeight="18.0" prefWidth="74.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="51.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="81.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="163.0" text="Virtueel Adres" />
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelVorigVirtueelAdres" contentDisplay="CENTER" layoutX="24.0" layoutY="4.0" prefHeight="18.0" prefWidth="88.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="115.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="163.0" text="Fysiek Adres" />
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelVorigFysiekAdres" contentDisplay="CENTER" layoutX="25.0" layoutY="4.0" prefHeight="18.0" prefWidth="80.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-9.0" layoutY="141.0" prefHeight="26.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="125.0" text="Offset" />
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="labelVorigeOffset" contentDisplay="CENTER" layoutX="45.0" layoutY="1.0" prefHeight="18.0" prefWidth="83.0" text="null" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="-10.0" layoutY="166.0" prefHeight="18.0" prefWidth="73.0" text="Page" />
+                              <Label fx:id="labelVorigPageNummer" contentDisplay="CENTER" layoutX="103.0" layoutY="166.0" prefHeight="18.0" prefWidth="55.0" text="null" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="26.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="125.0" text="Operatie" />
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelVorigeInstructie" contentDisplay="CENTER" layoutX="45.0" layoutY="1.0" prefHeight="18.0" prefWidth="83.0" text="null" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="707.0" layoutY="14.0" prefHeight="91.0" prefWidth="202.0" text="Informatie" textFill="#3484f0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelSysteemKlok" layoutX="122.0" layoutY="5.0" prefHeight="18.0" prefWidth="78.0" text="0" />
+                  <Label layoutX="9.0" layoutY="5.0" prefHeight="18.0" prefWidth="74.0" text="Systeemklok" />
+                  <Label layoutX="8.0" layoutY="21.0" text="Page Ins" />
+                  <Label fx:id="labelAantalPageIns" layoutX="122.0" layoutY="20.0" prefHeight="18.0" prefWidth="78.0" text="0" />
+                  <Label layoutX="9.0" layoutY="38.0" prefHeight="18.0" prefWidth="80.0" text="Page Outs" />
+                  <Label fx:id="labelAantalPageOuts" layoutX="122.0" layoutY="37.0" prefHeight="18.0" prefWidth="78.0" text="0" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" contentDisplay="CENTER" layoutX="440.0" layoutY="14.0" prefHeight="419.0" prefWidth="258.0" text="RAM" textFill="#3484f0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="237.0">
+               <children>
+                  <TableView fx:id="tableViewRam" layoutX="19.6" layoutY="19.6" prefHeight="159.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnFrame2" editable="false" prefWidth="75.0" sortable="false" text="Frame" />
+                      <TableColumn fx:id="tableColumnPid" editable="false" prefWidth="75.0" sortable="false" text="PID" />
+                        <TableColumn fx:id="tableColumnPage2" editable="false" prefWidth="75.0" sortable="false" text="Page" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" contentDisplay="CENTER" layoutX="67.0" layoutY="14.0" prefHeight="562.0" prefWidth="359.0" text="Page Table" textFill="#3484f0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="358.0">
+               <children>
+                  <TableView fx:id="tableViewpageTable" layoutX="19.6" layoutY="19.6" prefHeight="380.0" prefWidth="338.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnPage" editable="false" prefWidth="40.0" sortable="false" text="Page" />
+                        <TableColumn fx:id="tableColumnFrame" editable="false" prefWidth="40.0" text="Frame" />
+                        <TableColumn fx:id="tableColumnPresent" prefWidth="63.99999237060547" text="Present " />
+                        <TableColumn fx:id="tableColumnModified" editable="false" prefWidth="70.0" sortable="false" text="Modified" />
+                        <TableColumn fx:id="tableColumnLastAccessed" editable="false" prefWidth="101.60002746582029" sortable="false" text="Last Accessed" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="909.0" layoutY="14.0" prefHeight="552.0" prefWidth="202.0" text="Informatie Processen" textFill="#3484f0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableViewProcesInformatie" layoutX="-6.0" layoutY="14.0" prefHeight="401.6" prefWidth="200.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumnPid2" prefWidth="49.0" text="PID" />
+                      <TableColumn fx:id="tableColumnAantalWrites" prefWidth="65.0" text="Page Ins" />
+                        <TableColumn fx:id="tableColumnAantalReads" prefWidth="65.0" text="Page Outs" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
